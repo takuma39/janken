@@ -53,6 +53,7 @@ class HomesController < ApplicationController
 				end
 
 		else
+			flash[:alert] = "エラー"
 			redirect_to root_path
 		end
 

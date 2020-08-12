@@ -1,7 +1,36 @@
+<% if flash[:notice] %>
+	<div class="alert alert-warning" role="alert"><strong><%= notice %></strong></div>
+<% end %>
+
+<% if flash[:alert] %>
+     <div class="alert alert-danger" role="alert"><strong><%= alert %></strong></div>
+<% end %>
+
+<div class="container">
+
+	<div class="row center">
+		<h2>ジャンケン</h2>
+	</div>
 
 
-<%= link_to "グー", judgment_path(janken: "グー") %>
+	<div class="row" style="margin-top:15px">
+		<div class="col-md-4 center">
+			<%= link_to "グー", judgment_path(janken: "グー"), class: "btn btn-primary" %>
+		</div>
 
-<%= link_to "チョキ", judgment_path(janken: "チョキ") %>
+		<div class="col-md-4 center">
+			<%= link_to "チョキ", judgment_path(janken: "チョキ"), class: "btn btn-primary" %>
+		</div>
 
-<%= link_to "パー", judgment_path(janken: "パー") %>
+		<div class="col-md-4 center">
+			<%= link_to "パー", judgment_path(janken: "パー"), class: "btn btn-primary" %>
+		</div>
+	</div>
+
+</div>
+
+<style>
+.center {
+	text-align: center;
+}
+</style>
